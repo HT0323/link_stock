@@ -2,10 +2,25 @@ doctype html
 html
   head
     title
-      | Zzz
+      | LinkStock
     = csrf_meta_tags
     = csp_meta_tag
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   body
-    = yield
+    #wrapper
+      header
+        .logo_box
+          = link_to 'LinkStock', '#', class: 'logo'
+        .menu_box
+          - if user_signed_in?
+            = link_to 'ログアウト', destroy_user_session_path, method: 'delete'
+          - else
+            = link_to '新規登録', new_user_registration_path
+            = link_to 'ログイン', new_user_session_path
+      - flash.each do |name, msg|
+          = content_tag :div, msg, :id => "flash_#{name}" if msg.is_a?(String)
+      = yield
+      footer
+        p.copyright_text Copyright © LinkStock, All Rights Reserved.
+
