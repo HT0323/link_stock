@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="24c69097-1afe-4745-b1f0-e0a424037c34" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Gemfile.lock" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.bundle/" />
     <ignored path="$PROJECT_DIR$/components/" />
@@ -391,12 +392,12 @@
       <option name="presentableId" value="Default" />
       <updated>1558255327541</updated>
       <workItem from="1558255328775" duration="585000" />
-      <workItem from="1558257654304" duration="13071000" />
+      <workItem from="1558257654304" duration="13319000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13656000" />
+    <option name="totallyTimeSpent" value="13904000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
