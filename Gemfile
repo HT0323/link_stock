@@ -38,6 +38,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'slim-rails', '~> 3.1', '>= 3.1.3'
 gem 'html2slim', '~> 0.2.0'
+gem 'devise'
+gem 'devise-i18n'
+gem 'devise-i18n-views'
+gem 'bootstrap-sass'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

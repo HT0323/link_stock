@@ -1,0 +1,70 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "bootstrap-sprockets";
+@import "bootstrap";
+header, footer {
+  height: 50px;
+  background-color: #2E2F30;
+}
+
+.logo {
+  color: white;
+  font-size: 30px;
+  line-height: 50px;
+  padding-left: 30px;
+}
+.logo_box {
+  float: left;
+
+}
+.menu_box a {
+  color: white;
+  font-size: 20px;
+  line-height: 50px;
+  padding-left: 10px;
+}
+.menu_box {
+  float: right;
+  padding-right: 30px;
+}
+.copyright_text {
+  color: white;
+  line-height: 50px;
+  text-align:center;
+}
+body,
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+footer {
+  margin-top: auto;
+}
+.signup_form, .signin_form {
+  width: 700px;
+}
+#flash_notice {
+  background-color: cornflowerblue;
+  color: white;
+  text-align: center;
+}
+#flash_alert {
+  background-color: red;
+  color: white;
+  text-align: center;
+}
