@@ -11,60 +11,80 @@
  * It is generally better to create a new file per style scope.
  *
  *= require_tree .
+ *= require jquery.tagit
+ *= require tagit.ui-zendesk
  *= require_self
  */
+
+
 @import "bootstrap-sprockets";
 @import "bootstrap";
-header, footer {
-  height: 50px;
-  background-color: #2E2F30;
-}
+//header
+  header {
+    height: 50px;
+    background-color: #2E2F30;
+  }
 
-.logo {
-  color: white;
-  font-size: 30px;
-  line-height: 50px;
-  padding-left: 30px;
-}
-.logo_box {
-  float: left;
+  .logo {
+    color: white;
+    font-size: 30px;
+    line-height: 50px;
+    padding-left: 30px;
+  }
+  .logo_box {
+    float: left;
 
-}
-.menu_box a {
-  color: white;
-  font-size: 20px;
-  line-height: 50px;
-  padding-left: 10px;
-}
-.menu_box {
-  float: right;
-  padding-right: 30px;
-}
-.copyright_text {
-  color: white;
-  line-height: 50px;
-  text-align:center;
-}
-body,
-#wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
+  }
+  .menu_box a {
+    color: white;
+    font-size: 20px;
+    line-height: 50px;
+    padding-left: 10px;
+  }
+  .menu_box {
+    float: right;
+    padding-right: 30px;
+  }
 
-footer {
-  margin-top: auto;
-}
-.signup_form, .signin_form {
-  width: 700px;
-}
-#flash_notice {
-  background-color: cornflowerblue;
-  color: white;
-  text-align: center;
-}
-#flash_alert {
-  background-color: red;
-  color: white;
-  text-align: center;
-}
+//footer
+  footer {
+    height: 50px;
+    background-color: #2E2F30;
+  }
+
+  .copyright_text {
+    color: white;
+    line-height: 50px;
+    text-align:center;
+  }
+  body,
+  #wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  footer {
+    margin-top: auto;
+  }
+//sign_up_form/sign_in_form
+  .signup_form, .signin_form {
+    width: 700px;
+  }
+//flash_message
+  #flash_notice {
+    background-color: cornflowerblue;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+  }
+  #flash_alert {
+    background-color: red;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+  }
+//posts/new posts/edit
+  .post_form {
+    width: 700px;
+  }

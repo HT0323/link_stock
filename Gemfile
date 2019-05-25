@@ -42,6 +42,10 @@ gem 'devise'
 gem 'devise-i18n'
 gem 'devise-i18n-views'
 gem 'bootstrap-sass'
+gem 'acts-as-taggable-on', '~> 6.0'
+gem 'jquery-ui-rails'
+gem 'jquery-rails'
+gem 'gon'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

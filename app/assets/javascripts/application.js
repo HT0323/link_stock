@@ -12,6 +12,18 @@
 //
 //= require rails-ujs
 //= require activestorage
+
+//= require bootstrap-sprockets
+
+
+
+//= require jquery
+//= require jquery_ujs
+//= require jquery-ui
+//= require tag-it
 //= require turbolinks
 //= require_tree .
-//= require bootstrap-sprockets
+
+$(document).on('turbolinks:load', function() {
+    $('.something').do();
+});
