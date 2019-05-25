@@ -1,0 +1,8 @@
+- if obj.errors.present?
+  #error_explanation.alertalert-danger
+    h2
+      = "エラーが#{obj.errors.count}つ存在します"
+    ul
+      - obj.errors.full_messages.each do |msg|
+        li = msg
+

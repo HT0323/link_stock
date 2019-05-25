@@ -1,0 +1,10 @@
+= render "shared/errors", obj: @post
+.field.form-group
+  = form.label :memo
+  = form.text_field :memo, class: "form-control"
+.field.form-group
+  label タグ
+  ul#post-tags.form-control
+.field.form-group
+  label リンク
+  ul#post-links.form-control

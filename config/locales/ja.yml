@@ -1,0 +1,9 @@
+ja:
+  activerecord:
+    models:
+      post: 投稿
+    attributes:
+      post:
+        memo: メモ
+        tag_list: タグ
+        link_list: リンク

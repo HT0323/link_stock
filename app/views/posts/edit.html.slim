@@ -1,0 +1,8 @@
+.container.post_form
+  .h2
+    | 編集
+
+  = form_for(@post) do |form|
+    = render "form", form: form
+    .actions
+      = form.submit "変更", class: "btn btn-primary"
