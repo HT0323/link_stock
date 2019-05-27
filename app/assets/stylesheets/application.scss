@@ -19,6 +19,11 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 //header
   header {
     height: 50px;
@@ -88,3 +93,89 @@
   .post_form {
     width: 700px;
   }
+  .post_box {
+    margin-bottom: 50px;
+    padding: 50px;
+    width: 700px;
+  }
+
+  .tag {
+    color: fuchsia;
+    border: 2px solid fuchsia;
+    border-radius: 20px;
+    text-align: center;
+    padding: 5px 20px;
+    float: left;
+    margin-right: 10px;
+  }
+  .tag_area, .link_area {
+    margin-bottom: 20px;
+  }
+
+  .glyphicon-tag {
+    color: fuchsia;
+    padding-right: 10px;
+  }
+
+  .glyphicon-link {
+    color: #6d95e0;
+    padding-right: 10px;
+    float: left;
+  }
+
+.link {
+  color: #6d95e0;
+  border: 2px solid #6d95e0;
+  border-radius: 20px;
+  text-align: center;
+  padding: 5px 20px;
+  margin-bottom: 10px;
+  position: relative;
+
+}
+ .link a {
+   display: block;
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   line-height: 24px;
+   float: left;
+   width: 595px;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   padding: 0 40px;
+ }
+
+.link_area {
+  margin-bottom: 20px;
+}
+a:hover {
+  color: #6d95e0;
+}
+.glyphicon-edit {
+  color: #72d80c;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+.glyphicon-trash {
+  color: #B00100;
+  font-size: 30px;
+}
+.memo_area {
+  width: 594px;
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+.post_menu_area {
+  text-align: right;
+}
+.posts_area {
+  margin-top: 30px;
+}
+ul.tagit {
+  height: 100%;
+}

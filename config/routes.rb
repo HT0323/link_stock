@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
   resources :posts
-  root 'static_pages#top'
+  root 'posts#index'
   devise_for :users
 
 end
