@@ -36,6 +36,19 @@ class PostsController < ApplicationController
   end
 
   def index
+    if user_signed_in?
+      @posts = current_user.posts.includes(:tags).page(params[:page]).per(10)
+    else
+      render template: "static_pages/top"
+    end
+  end
+
+  def destroy
+    @post = current_user.posts.find(params[:id])
+    if @post.destroy
+      flash[:notice] = '削除しました'
+      redirect_to root_path
+    end
   end
 
 
