@@ -24,104 +24,108 @@
   display: block;
   clear: both;
 }
+
 //header
-  header {
-    height: 50px;
-    background-color: #2E2F30;
-  }
+header {
+  height: 50px;
+  background-color: #2E2F30;
+}
 
-  .logo {
-    color: white;
-    font-size: 30px;
-    line-height: 50px;
-    padding-left: 30px;
-  }
-  .logo_box {
-    float: left;
+.logo {
+  color: white;
+  font-size: 30px;
+  line-height: 50px;
+  padding-left: 30px;
+}
+.logo_box {
+  float: left;
 
-  }
-  .menu_box a {
-    color: white;
-    font-size: 20px;
-    line-height: 50px;
-    padding-left: 10px;
-  }
-  .menu_box {
-    float: right;
-    padding-right: 30px;
-  }
+}
+.menu_box a {
+  color: white;
+  font-size: 20px;
+  line-height: 50px;
+  padding-left: 10px;
+}
+.menu_box {
+  float: right;
+  padding-right: 30px;
+}
 
 //footer
-  footer {
-    height: 50px;
-    background-color: #2E2F30;
-  }
+footer {
+  height: 50px;
+  background-color: #2E2F30;
+}
 
-  .copyright_text {
-    color: white;
-    line-height: 50px;
-    text-align:center;
-  }
-  body,
-  #wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-  }
+.copyright_text {
+  color: white;
+  line-height: 50px;
+  text-align:center;
+}
+body,
+#wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
-  footer {
-    margin-top: auto;
-  }
+footer {
+  margin-top: auto;
+}
 //sign_up_form/sign_in_form
   .signup_form, .signin_form {
     width: 700px;
   }
+
 //flash_message
-  #flash_notice {
-    background-color: cornflowerblue;
-    color: white;
-    text-align: center;
-    font-size: 20px;
-  }
-  #flash_alert {
-    background-color: red;
-    color: white;
-    text-align: center;
-    font-size: 20px;
-  }
+#flash_notice {
+  background-color: cornflowerblue;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+#flash_alert {
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
 //posts/new posts/edit
-  .post_form {
-    width: 700px;
-  }
-  .post_box {
-    margin-bottom: 50px;
-    padding: 50px;
-    width: 700px;
-  }
+.post_form {
+  width: 700px;
+}
+.post_box {
+  margin-bottom: 50px;
+  padding: 50px;
+  width: 700px;
+}
+//posts/index
+.tag {
+  color: fuchsia;
+  border: 2px solid fuchsia;
+  border-radius: 20px;
+  text-align: center;
+  padding: 5px 20px;
+  float: left;
+  margin-right: 10px;
+}
+.tag_area, .link_area {
+  margin-bottom: 20px;
+}
 
-  .tag {
-    color: fuchsia;
-    border: 2px solid fuchsia;
-    border-radius: 20px;
-    text-align: center;
-    padding: 5px 20px;
-    float: left;
-    margin-right: 10px;
-  }
-  .tag_area, .link_area {
-    margin-bottom: 20px;
-  }
+.glyphicon-tag {
+  color: fuchsia;
+  padding-right: 10px;
+}
 
-  .glyphicon-tag {
-    color: fuchsia;
-    padding-right: 10px;
-  }
-
-  .glyphicon-link {
-    color: #6d95e0;
-    padding-right: 10px;
-    float: left;
-  }
+.glyphicon-link {
+  color: #6d95e0;
+  padding-right: 10px;
+  float: left;
+}
 
 .link {
   color: #6d95e0;
@@ -131,9 +135,8 @@
   padding: 5px 20px;
   margin-bottom: 10px;
   position: relative;
-
 }
- .link a {
+.link a {
    display: block;
    position: absolute;
    top: 0;
@@ -152,9 +155,11 @@
 .link_area {
   margin-bottom: 20px;
 }
+
 a:hover {
   color: #6d95e0;
 }
+
 .glyphicon-edit {
   color: #72d80c;
   font-size: 30px;
@@ -165,17 +170,68 @@ a:hover {
   color: #B00100;
   font-size: 30px;
 }
+
 .memo_area {
   width: 594px;
   margin-bottom: 20px;
   word-wrap: break-word;
 }
+
 .post_menu_area {
   text-align: right;
 }
+
 .posts_area {
   margin-top: 30px;
 }
+
 ul.tagit {
   height: 100%;
+}
+
+ul {
+  list-style: none;
+}
+
+input[type="checkbox"]:checked + label {
+  background: #31A9EE;
+  color: #ffffff;
+}
+
+.label:hover {
+  background-color: #E2EDF9;
+}
+
+input[type = checkbox] {
+  display: none;
+}
+
+.label {
+  display: block;
+  margin: 10px;
+  width: 300px;
+  height: 45px;
+  text-align: center;
+  line-height: 35px;
+  padding-left: 5px;
+  padding-right: 5px;
+  cursor: pointer;
+  color: fuchsia;
+  border: 2px solid #006DD9;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.tag_search_area {
+  margin-top: 30px;
+}
+
+.post_all_btn {
+  width: 300px;
+  margin-left: 50px;
+}
+
+.search_btn {
+  width: 300px;
+  margin-left: 10px;
 }

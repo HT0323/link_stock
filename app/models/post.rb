@@ -41,4 +41,19 @@ class Post < ApplicationRecord
     def self.set_post(post_id, user_id)
       @post = User.find(user_id).posts.find(post_id)
     end
+
+    # タグの検索
+    def self.search(tag_list, user_id, page )
+      search_tag_list = []
+      tag_list.permit!.to_h
+      hash_tag_list = tag_list.to_h
+      hash_tag_list.each do |tag, state|
+        if state.to_i == 1
+          search_tag_list << tag
+        end
+      end
+      @tags = User.find(user_id).posts.tags_on(:tags)
+      page ||= 1
+      User.find(user_id).posts.tagged_with(search_tag_list).page(page).per(10)
+    end
 end
