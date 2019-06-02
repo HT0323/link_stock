@@ -48,7 +48,7 @@ class Post < ApplicationRecord
     end
 
     # Postオブジェクトを取得する
-    def self.setst(post_id, user_id)
+    def self.set_post(post_id, user_id)
       @post = User.find(user_id).posts.find(post_id)
     end
 
