@@ -7,6 +7,7 @@ class Post < ApplicationRecord
   validate :check_link_list
   validate :check_link_list_length
   validate :check_tag_list_length
+  validate :check_url_format
 
   private
     # タグが入力されているか確認
@@ -37,8 +38,17 @@ class Post < ApplicationRecord
       end
     end
 
+    # リンクが正しいフォーマット確認
+    def check_url_format
+      self.link_list.each do |link|
+        unless !!link.match(/\A(http|https):\/\/[\S]+\z/)
+          errors.add(:link_list, "に正しいURLを入力してください")
+        end
+      end
+    end
+
     # Postオブジェクトを取得する
-    def self.set_post(post_id, user_id)
+    def self.setst(post_id, user_id)
       @post = User.find(user_id).posts.find(post_id)
     end
 
