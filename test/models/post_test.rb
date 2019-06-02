@@ -2,7 +2,7 @@ require 'test_helper'
 
 class PostTest < ActiveSupport::TestCase
   def setup
-    @post = users(:test).posts.build(memo: 'test')
+    @post = users(:test1).posts.build(memo: 'test')
     @post.tag_list.add(%w(test1 test2 test3 test4 test5))
     @post.link_list.add(%w(https://test1.com https://test2.com https://test3.com https://test4.com https://test5.com))
   end

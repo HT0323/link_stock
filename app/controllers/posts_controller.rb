@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update]
-  before_action :correct_user, only: [:edit, :update]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :set_post_tags_to_gon, only: [:edit, :update]
   before_action :set_available_tags_to_gon, only: [:new, :edit, :create, :update]
   before_action :set_post_links_to_gon, only: [:edit, :update]
