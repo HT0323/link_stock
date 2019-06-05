@@ -4,7 +4,9 @@ class PostsInterfaceTest < ActionDispatch::IntegrationTest
   include Warden::Test::Helpers
   def setup
     @user = users(:test1)
-    @post = @user.posts.create(tag_list: 'test', link_list: 'https://test.co.jp')
+    @post = @user.posts.create(tag_list: 'test, test2', link_list: 'https://test.co.jp')
+    @post2 = @user.posts.create(tag_list: 'test2', link_list: 'https://test.co.jp/2')
+    @post3 = @user.posts.create(tag_list: 'test', link_list: 'https://test.co.jp/3')
   end
 
   test "投稿の新規作成" do
@@ -51,5 +53,16 @@ class PostsInterfaceTest < ActionDispatch::IntegrationTest
     end
     follow_redirect!
     assert !flash.empty?
+  end
+
+  test "投稿の検索" do
+    login_as(@user)
+    get root_path
+    get root_path, params: {search_tag_list: {
+        test: 1, test2: 1
+                    }}
+    assert_match 'https://test.co.jp', response.body
+    assert_no_match 'https://test.co.jp/2', response.body
+    assert_no_match 'https://test.co.jp/3', response.body
   end
 end

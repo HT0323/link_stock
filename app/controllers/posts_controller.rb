@@ -40,6 +40,7 @@ class PostsController < ApplicationController
     if user_signed_in?
       @tags = current_user.posts.tags_on(:tags)
       if params[:search_tag_list]
+
         @posts = Post.search(params[:search_tag_list], current_user.id, params[:page])
         return
       end
