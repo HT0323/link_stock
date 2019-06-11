@@ -1,0 +1,16 @@
+.post_box.panel.panel-success
+  .tag_area.clearfix
+    - post.tags.each do |tag|
+      .tag
+        span class="glyphicon glyphicon-tag"
+        = "#{tag.name} "
+  .link_area
+    - post.links.each do |link|
+      .link.clearfix
+        span class="glyphicon glyphicon-link"
+        = link_to "#{link.name}", "#{link.name}", target: "_blank"
+  .memo_area
+    = post.memo
+  .post_menu_area
+    = link_to '', edit_post_path(post), class: "glyphicon glyphicon-edit", data: {"turbolinks" => false}
+    = link_to '', post_path(post), method: :delete , class: "glyphicon glyphicon-trash"

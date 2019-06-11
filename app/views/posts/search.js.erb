@@ -1,0 +1,4 @@
+$('#posts_area').html(
+  '<%= j(render partial: 'posts/post' , collection: @posts) %>'
+); 
+$("html,body").animate({scrollTop:$('header').offset().top});

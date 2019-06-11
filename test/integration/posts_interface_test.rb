@@ -58,11 +58,24 @@ class PostsInterfaceTest < ActionDispatch::IntegrationTest
   test "投稿の検索" do
     login_as(@user)
     get root_path
-    get root_path, params: {search_tag_list: {
+    post posts_search_path, params: {search_tag_list: {
         test: 1, test2: 1
                     }}
     assert_match 'https://test.co.jp', response.body
     assert_no_match 'https://test.co.jp/2', response.body
     assert_no_match 'https://test.co.jp/3', response.body
   end
+
+  test "投稿の検索(Ajax)" do
+    login_as(@user)
+    get root_path
+    post posts_search_path, xhr: true,  params: {search_tag_list: {
+        test: 1, test2: 1
+                    }}
+    assert_match 'https://test.co.jp', response.body
+    assert_no_match 'https://test.co.jp/2', response.body
+    assert_no_match 'https://test.co.jp/3', response.body
+  end
+  
+  
 end

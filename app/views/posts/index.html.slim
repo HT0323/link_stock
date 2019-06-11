@@ -2,7 +2,7 @@
   .row
     .col-lg-4.tag_search_area
       = link_to '全ての投稿', root_path , class: 'btn btn-primary post_all_btn'
-      = form_tag({:controller => 'posts', :action => 'index'}, {:method => :get}) do
+      = form_tag "/posts/search", method: :post, remote: true do
         ul
           - @tags.each do |tag|
             li
@@ -11,22 +11,6 @@
                   span class="glyphicon glyphicon-tag"
                   | #{tag.name}
           input[type="submit" value="検索" class = "btn btn-success search_btn"]
-    .col-lg-8.posts_area
-      - @posts.each do |post|
-        .post_box.panel.panel-success
-          .tag_area.clearfix
-            - post.tags.each do |tag|
-              .tag
-                span class="glyphicon glyphicon-tag"
-                = "#{tag.name} "
-          .link_area
-            - post.links.each do |link|
-              .link.clearfix
-                span class="glyphicon glyphicon-link"
-                = link_to "#{link.name}", "#{link.name}", target: "_blank"
-          .memo_area
-            = post.memo
-          .post_menu_area
-            = link_to '', edit_post_path(post), class: "glyphicon glyphicon-edit", data: {"turbolinks" => false}
-            = link_to '', post_path(post), method: :delete , class: "glyphicon glyphicon-trash"
+    .col-lg-8#posts_area
+      = render @posts
       = paginate @posts
