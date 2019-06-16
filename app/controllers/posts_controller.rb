@@ -38,16 +38,15 @@ class PostsController < ApplicationController
 
   def index
     if user_signed_in?
-      @tags = current_user.posts.tags_on(:tags)
-      
+      @tags = current_user.posts.tags_on(:tags).order('taggings_count DESC')
       @posts = current_user.posts.includes(:tags).page(params[:page]).per(10)
-
     else
       render template: "static_pages/top"
     end
   end
 
   def search
+    @tags = current_user.posts.tags_on(:tags).order('taggings_count DESC')
     @posts = Post.search(params[:search_tag_list], current_user.id, params[:page])
     respond_to do |format|
       format.html {render 'index'}

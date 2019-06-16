@@ -8,7 +8,7 @@ class Post < ApplicationRecord
   validate :check_link_list_length
   validate :check_tag_list_length
   validate :check_url_format
-
+  default_scope -> { order(created_at: :desc) }
   private
     # タグが入力されているか確認
     def check_tag_list
