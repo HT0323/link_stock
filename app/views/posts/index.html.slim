@@ -9,7 +9,7 @@
                 = check_box "search_tag_list", tag.name
                 label.label[ for = "search_tag_list_#{tag.name}"]
                   span class="glyphicon glyphicon-tag"
-                  | #{tag.name}
+                  | #{tag.name} (#{tag.taggings_count})
           input[type="submit" value="検索" class = "btn btn-success search_btn"]
     .col-lg-8#posts_area
       = render @posts
