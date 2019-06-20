@@ -1,24 +1,46 @@
-# README
+# LinkStockについて
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## URL
 
-Things you may want to cover:
+ https://link-stock.herokuapp.com
 
-* Ruby version
+## テストユーザー
 
-* System dependencies
+email: test1@gmail.com  
+password: aaaaaa
 
-* Configuration
+## 重視した点 
 
-* Database creation
+Github上でlssueを作成し、それにそう形で制作を進めた 。  
+実務を想定し、ブランチを切った上で作業を進め、プルリクを上げてコードレビューを受けたのちにマスターにマージし本番環    境にデプロイする方法で制作を進めた。  
+開発環境にDockerを使用した。
 
-* Database initialization
+## 技術内容
 
-* How to run the test suite
+言語 : Ruby  
+フレームワーク : Rails  
+バージョン管理 : Git  
+インフラ : Heroku  
+開発環境 : Docker  
+データーベース: SQLite(開発環境)MySQL
 
-* Services (job queues, cache servers, search engines, etc.)
+## 機能の概要
 
-* Deployment instructions
+ユーザー登録機能  
+ユーザーログイン機能  
+投稿一覧表示機能  
 
-* ...
+
+
+
+
+
+
+
+
+
+
+
+
+
+
